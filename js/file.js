@@ -394,10 +394,10 @@ function closePage(currentPage) {
         });
     }
 
-    $("#center-button").css({
-        "overflow" : "hidden"
-    });
     $("#pagetitle").animate({opacity: "0"}, 500, function() {
+        $("#center-button").css({
+            "overflow" : "hidden"
+        });
         $("#sliderleft").animate({width: "0px", marginLeft: "1500px"}, 200, "linear");
         $("#sliderright").animate({width: "0px"}, 200, "linear", function() {
             $("#sliderright").css({opacity: "0"});
