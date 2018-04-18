@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117671460-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-117671460-1');
+        </script>
+
     <title>David Liu</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +20,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="js/file.js"></script>    
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <script src="js/file.js"></script>
     <script type="text/javascript">
         // Underlines clicked navigation links
         $(document).ready(function() {
@@ -24,43 +34,60 @@
                 $('#cover').css({"z-index": 1});
                 setTimeout(function() {
                     $('#cover').css("z-index", "-1");
-                }, 3000);      
+                }, 3000);
               });
             });
         });
     </script>
-    
+
     <script>
         // for transitions
         var currentPage = "home"
     </script>
-    
+
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
 </head>
-    
+
 <body>
 
     <div class="navbar">
       <!-- <img src="assets/logo.png" id="logo"></img> -->
       <a class="navlink currentlyActive" id="home" href="#home">HOME</a>
-      <a class="navlink" id="contact" href="#melee">CONTACT</a>
+      <a class="navlink" id="extras" href="#extras">EXTRAS</a>
+      <a class="navlink" id="contact" href="#contact">CONTACT</a>
       <a class="navlink" id="melee" href="#melee">MELEE</a>
       <a class="navlink" id="projects" href="#projects">PROJECTS</a>
+      <a class="navlink" id="articles" href="#articles">ARTICLES</a>
       <a class="navlink" id="about" href="#about">ABOUT</a>
     </div>
-    
-    <div id=cover></div> 
+
+    <div id=cover></div>
 
     <div id="name">David Liu</div>
     <div id="blurb">Coder | Designer | Melee Player</div>
-    <div id="pagetitle"></div>
     <div id="center-button">
+        <div id="pagetitle"></div>
         <div id="sliderleft"></div>
         <div id="sliderright"></div>
         <div id="start" class="textHover blackHover">
             <div id="innerbox">
-                <img src="assets/profile.png" id="profile"></img>
-                <img src="assets/meleefox.png" id="meleefox"></img>
+                <!-- About Page Assets -->
+                <img src="assets/profile.jpg" id="profile"></img>
                 <a id='resume' href='assets/resume.pdf'><img src='assets/resume.png'></img></a>
+
+                <!-- Melee Page Assets -->
+                <img src="assets/meleefox.png" id="meleefox"></img>
+                <iframe id="twitch-embed"
+                    src="http://player.twitch.tv/?channel=r2dliu"
+                    height="360"
+                    width="640"
+                    frameborder="0"
+                    scrolling="no"
+                    allowfullscreen="true">
+                </iframe>
+
+                <!-- Project Page Contents -->
                 <a id='tableone' href='https://github.com/r2dliu/tableonegraphs'><img src='assets/tableonepic.png' class='project'></img>
                     <div id="project1" class="plabel">Table One</div>
                     <span id="d1">An app developed in Shiny, a web application framework for R. It produces a configurable "table 1," a description of baseline patient characteristics, essential in medical research.</span>
@@ -70,9 +97,35 @@
                     <span id="d2">An GUI application developed in Python/PyQt, used to update and animate a configurable scoreboard overlay that displays text such as scores, names, and rounds.</span>
                 </a>
                 <a id='website' href='https://www.r2dliu.com'><img src='assets/sitepic.png' class='project'></img>
-                    <div id="project1" class="plabel">Website</div>
+                    <div id="project3" class="plabel">Website</div>
                     <span id="d3">This website. Made with HTML, CSS3, and Javascript, designed and hand-coded from scratch.</span>
                 </a>
+                <a id='hangman' href='https://github.com/r2dliu/hangman'><img src='assets/gallows0.png' class='project'></img>
+                    <div id="project4" class="plabel">Hangman</div>
+                    <span id="d4">A hangman game, made in C++. Hand-coded HTTP server, played from a web browser client.</span>
+                </a>
+
+                <!-- Articles Page Contents -->
+                <div id="articlebox">
+                <article id="ledgedash" onclick="location.href='articles/ledgedash.html';" class='article'>
+                  <div class='tag' style='background-color:red;top: 375px;left: 16px;'>MELEE</div>
+                  <div class='articleinner'>Optimizing Ledgedash and Effects of PODE
+                      <div class='preview'>Recently, I’ve been switching to and from various controllers after my main controller began acting erratically...
+                          <div class='readmore'>Read More></div>
+                      </div>
+                  </div>
+                </article>
+                <article id="nim" onclick="location.href='articles/nim.pdf';" class='article'>
+                  <div class='tag' style='background-color:green;top: 140px; left: 16px;'>MATH</div>
+                  <div class='articleinner'>On the Game of Nim
+                      <div class='preview'>Nim is a simple but fascinating strategy and logic...
+                          <div class='readmore'>Read More></div>
+                      </div>
+                  </div>
+                </article>
+              </div>
+
+                <!-- Contact Page Contents -->
                 <a id='gmail' href='mailto:zliu3301@gmail.com'><img src='assets/icons/gmail.png' class='icon'></img>
                     <div id="label1" class="label">zliu3301@gmail.com</div>
                 </a>
@@ -89,16 +142,18 @@
                     <div id="label5" class="label">LinkedIn Profile</div>
                 </a>
                 <div id="contactblurb">Get in touch with me anytime!</div>
-                <span id="innertext">ABOUT ME</span>                
+
+                <!-- Home Page -->
+                <span id="innertext">ABOUT ME</span>
             </div>
-        </div>    
+        </div>
     </div>
 
-    <script> 
+    <script>
         $(document).ready(function() {
             $("#home").click(function() {
                 if (currentPage != "home") {
-                    closePage(currentPage); 
+                    closePage(currentPage);
                     currentPage = "home";
                     setTimeout(function () {
                         homePage();
@@ -106,20 +161,20 @@
                 };
             });
         });
-        
+
         $(document).ready(function() {
             $("#center-button").one("click", function() {
                 $("#about").addClass('currentlyActive');
                 currentPage = "about";
-                explodePage("center"); 
+                explodePage("center");
             });
         });
-        
+
         $(document).ready(function() {
             $("#about").click(function() {
                 if (currentPage == "home") {
                     currentPage = "about";
-                    explodePage("about"); 
+                    explodePage("about");
                 }
                 else if (currentPage != "about") {
                     closePage(currentPage);
@@ -130,12 +185,12 @@
                 };
             });
         });
-        
-        $(document).ready(function() { 
+
+        $(document).ready(function() {
             $("#melee").click(function() {
                 if (currentPage == "home") {
                     currentPage = "melee";
-                    explodePage("melee"); 
+                    explodePage("melee");
                 }
                 else if (currentPage != "melee") {
                     closePage(currentPage);
@@ -146,12 +201,12 @@
                 };
             });
         });
-        
-        $(document).ready(function() { 
+
+        $(document).ready(function() {
             $("#projects").click(function() {
                 if (currentPage == "home") {
                     currentPage = "projects";
-                    explodePage("projects"); 
+                    explodePage("projects");
                 }
                 else if (currentPage != "projects") {
                     closePage(currentPage);
@@ -162,12 +217,28 @@
                 };
             });
         });
-        
-        $(document).ready(function() { 
+
+        $(document).ready(function() {
+            $("#articles").click(function() {
+                if (currentPage == "home") {
+                    currentPage = "articles";
+                    explodePage("articles");
+                }
+                else if (currentPage != "articles") {
+                    closePage(currentPage);
+                    currentPage = "articles";
+                    setTimeout(function () {
+                        articlesPage();
+                    }, 1300);
+                };
+            });
+        });
+
+        $(document).ready(function() {
             $("#contact").click(function() {
                 if (currentPage == "home") {
                     currentPage = "contact";
-                    explodePage("contact"); 
+                    explodePage("contact");
                     setTimeout(function() {
                         $("#gmail").css({
                             "visibility" : "visible",
@@ -203,7 +274,7 @@
                             "visibility" : "visible"
                         });
                     }, 1600);
-                    
+
                     setTimeout(function() {
                         console.log("opacity changed")
                         $("#gmail").animate({"opacity" : 0.3});
@@ -220,7 +291,7 @@
                     setTimeout(function () {
                         contactPage();
                     }, 1300);
-                    
+
                     setTimeout(function() {
                         $("#gmail").css({
                             "visibility" : "visible",
@@ -256,7 +327,7 @@
                             "visibility" : "visible"
                         });
                     }, 3200);
-                    
+
                     setTimeout(function() {
                         console.log("opacity changed")
                         $("#gmail").animate({"opacity" : 0.3});
@@ -266,10 +337,10 @@
                         $("#linkedin").animate({"opacity" : 0.3});
                         $("#contactblurb").animate({"opacity" : 0.7});
                     }, 3220);
-                };             
+                };
             });
         });
-        
+
     </script>
 
 </body>
