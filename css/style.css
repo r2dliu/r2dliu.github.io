@@ -111,7 +111,6 @@ body {
     border-right: 1px solid #333333;
 }
 
-
 .navbar a:hover {
     background-color: white;
     color: black;
@@ -249,28 +248,25 @@ img.project:hover {
 
 #center-button {
     overflow: hidden;
-    width: 120px;
-    height: 45px;
-    background: none;
+    width: 8.4vw;
+    height: 5vh;
     position: absolute;
     border: 2px solid white;
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-		z-index: 2;
-}
-
-#start {
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-    line-height: 27px;
+	z-index: 2;
+	cursor: pointer;
     font-family: "brandonbold", sans-serif;
     font-size: 12pt;
     color: #f7f7f7;
     text-align: center;
-    padding: 10px 20px;
     text-decoration: none;
+}
+
+#launcher{
+	height: 5vh;
+	line-height: 5vh;  
 }
 
 #profile {
@@ -284,6 +280,18 @@ img.project:hover {
     border: 2px solid #333333;
 }
 
+#innertext {
+    visibility: hidden;
+    opacity: 0;
+	position: fixed;
+	text-align: left;
+	top: 50px;
+	width: 1500px;
+	height: 550px;
+	line-height: 200%;
+	font-size: 15pt;
+}
+
 #meleefox {
     visibility: hidden;
     opacity: 0;
@@ -292,6 +300,18 @@ img.project:hover {
     top: 250px;
     height: 350px;
     width: 350px;
+}
+
+#meleetext {
+    visibility: hidden;
+    opacity: 0;
+	position: fixed;
+	text-align: left;
+	top: 50px;
+	width: 1500px;
+	height: 550px;
+	line-height: 200%;
+	font-size: 15pt;
 }
 
 #resume {
@@ -550,10 +570,6 @@ a:hover .plabel{
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
     height: 50px;
-}
-
-#innertext {
-    z-index: -1;
 }
 
 .articleinner {

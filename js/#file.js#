@@ -5,11 +5,10 @@ function explodePage(button) {
         $("#name").animate({opacity:0});
         $("#blurb").animate({opacity:0});
     }
-    $("#launcher").animate({opacity:0}, function() {
-        $("#launcher").css({visibility: "hidden"})  ;
-    });
+
     //adjust highlighting
     $("#home").removeClass('currentlyActive');
+
     //open corresponding page
     if (button == "center" || button == "about") {
         rectangle(function() {
@@ -52,6 +51,7 @@ function rectangle(callback) {
 //opens the about page
 function aboutPage() {
     //animate top and title
+    $("#innertext").css("opacity", "0");
     $("#center-button").animate({width: "1500px"}, 200, "linear", function() {
         $("#center-button").animate({height: "600px", top: "400.9px"}, 200, "linear", function() {
             //top slide in; marginLeft necessary for right to left
@@ -59,6 +59,8 @@ function aboutPage() {
             $("#sliderright").css({"opacity" : "1"});
             $("#sliderleft").animate({width: "1262px", marginLeft: "237px"}, 500);
             $("#sliderright").animate({width: "25px"}, 500, function() {
+                //page text
+                document.getElementById("innertext").innerHTML = "I'm David/Zhiyuan/致远, a student at Swarthmore College in Swarthmore, Pennsylvania. <br> I'm a computer science major, set to graduate in May of 2018. <br> <br> Relevant interests include software development, building web pages, and generating creative solutions to technical problems. <br> You can check out samples of my work over in the Projects section, or download my resume to see my skillset. <br> <br> <br> Outside of academics and programming, I love keeping physically fit, practicing my Chinese, and rock climbing/bouldering. <br> <br> My biggest hobby is playing video games, but nearly all of that time is devoted toward a single game, Super Smash Bros. Melee. <br> Currently, I am a professional-level player sponsored by EndGameTV. <br> See the Melee section for more info!";
                 $("#center-button").css({
                     "overflow" : "visible"
                 });
@@ -66,6 +68,15 @@ function aboutPage() {
                     "margin-right" : "-23px",
                     "margin-bottom": "0px",
                     "height": "560px"
+                });
+                $("#innertext").css({
+                    "position": "fixed",
+                    "text-align": "left",
+                    "top": "50px",
+                    "width": "1500px",
+                    "height": "550px",
+                    "line-height": "200%",
+                    "font-size": "15pt"
                 });
                 $("#pagetitle").text("About Me");
                 $("#pagetitle").css({
@@ -80,10 +91,8 @@ function aboutPage() {
                 });
                 $("#pagetitle").animate({opacity:1}, function() {
                     $("#center-button").find("span").animate({opacity:1});
-                    $("#innertext").css({"visibility": "visible"});
                     $("#profile").css({"visibility": "visible"});
                     $("#resume").css({"visibility": "visible"});
-                    $("#innertext").animate({opacity:1});
                     $("#profile").animate({opacity:1});
                     $("#resume").animate({opacity:1});
                 });
@@ -107,6 +116,8 @@ function projectsPage() {
             $("#sliderright").css({"opacity" : "1"});
             $("#sliderleft").animate({width: "1270px", marginLeft: "230px"}, 500);
             $("#sliderright").animate({width: "25px"}, 500, function() {
+                //page text
+                document.getElementById("innertext").innerHTML = "";
                 $("#center-button").css({
                     "overflow" : "visible"
                 });
@@ -114,6 +125,12 @@ function projectsPage() {
                     "margin-right" : "-23px",
                     "margin-bottom": "0px",
                     "height": "560px"
+                });
+                $("#innertext").css({
+                    "top": "50px",
+                    "width": "1500px",
+                    "height": "550px",
+                    "line-height": "200%"
                 });
                 $("#pagetitle").text("Projects");
                 $("#pagetitle").css({
@@ -163,6 +180,8 @@ function projectsPage() {
 
 //opens the melee page
 function meleePage() {
+
+    $("#innertext").css("opacity", "0");
     //animate top and title
     $("#center-button").animate({width: "1500px"}, 200, "linear", function() {
         $("#center-button").animate({height: "600px", top: "400.9px"}, 200, "linear", function() {
@@ -171,6 +190,8 @@ function meleePage() {
             $("#sliderright").css({"opacity" : "1"});
             $("#sliderleft").animate({width: "1320px", marginLeft: "178px"}, 500);
             $("#sliderright").animate({width: "25px"}, 500, function() {
+                //page text
+                document.getElementById("innertext").innerHTML = "In the world of competitive Super Smash Bros. Melee, I am R2DLiu, a professional-level player sponsored by <a class='link' href='http://endgametv.esportsify.com/articles/news/gaming/21/welcome-r2dliu-to-egtv'>EndGameTV</a>. <br> I started playing competitively in 2014 as a Sheik player, and over the following year rose to the top of my region while switching to Fox, who has been my character of choice since. <br> <br> My Doc Kids article, which details my Melee biography, can be found <a class='link' href='http://peekand.co/this-week-in-e-sports/smash/doc-kids/r2dliu/'>here<a>. <br> You can also read my <a class='link' href='https://www.ssbwiki.com/Smasher:R2DLiu'>ssbwiki profile<a> for my tournament history and player card. <br> <br> Follow me on  <a class='link' href='https://twitch.tv/r2dliu'>Twitch</a> and <a class='link' href='https://twitter.com/r2_dliu'>Twitter</a> for updates!";
                 $("#center-button").css({
                     "overflow" : "visible"
                 });
@@ -190,12 +211,10 @@ function meleePage() {
                     "letter-spacing": "1px"
                 });
                 $("#meleefox").css({"visibility": "visible"});
-                $("#meleetext").css({"visibility": "visible"});
                 $("#twitch-embed").css({"visibility": "visible"});
                 $("#pagetitle").animate({opacity:1}, function() {
                     $("#center-button").find("span").animate({opacity:1});
                     $("#meleefox").animate({opacity:0.6});
-                    $("#meleetext").animate({opacity:1});
                     $("#twitch-embed").animate({opacity:1});
                 });
             });
@@ -214,6 +233,8 @@ function articlesPage() {
             $("#sliderright").css({"opacity" : "1"});
             $("#sliderleft").animate({width: "1270px", marginLeft: "230px"}, 500);
             $("#sliderright").animate({width: "25px"}, 500, function() {
+                //page text
+                document.getElementById("innertext").innerHTML = "";
                 $("#center-button").css({
                     "overflow" : "visible"
                 });
@@ -221,6 +242,12 @@ function articlesPage() {
                     "margin-right" : "-23px",
                     "margin-bottom": "0px",
                     "height": "560px"
+                });
+                $("#innertext").css({
+                    "top": "50px",
+                    "width": "1500px",
+                    "height": "550px",
+                    "line-height": "200%"
                 });
                 $("#pagetitle").text("Articles");
                 $("#pagetitle").css({
@@ -260,6 +287,8 @@ function contactPage() {
             $("#sliderright").css({"opacity" : "1"});
             $("#sliderleft").animate({width: "1280px", marginLeft: "220px"}, 500);
             $("#sliderright").animate({width: "25px"}, 500, function() {
+                //page text
+                document.getElementById("innertext").innerHTML = "";
                 $("#center-button").css({
                     "overflow" : "visible"
                 });
@@ -267,6 +296,12 @@ function contactPage() {
                     "margin-right" : "-23px",
                     "margin-bottom": "0px",
                     "height": "560px"
+                });
+                $("#innertext").css({
+                    "top": "50px",
+                    "width": "1500px",
+                    "height": "550px",
+                    "line-height": "200%"
                 });
                 $("#pagetitle").text("Contact");
                 $("#pagetitle").css({
@@ -297,7 +332,6 @@ function closePage(currentPage) {
         $("#resume").animate({opacity: "0"});
         $("#innertext").animate({opacity: "0"}, 500, function() {
             $("#resume").css({"visibility" : "hidden"});
-            $("#innertext").css({"visibility" : "hidden"});
             $("#profile").css({"visibility" : "hidden"});
         });
     }
@@ -337,12 +371,11 @@ function closePage(currentPage) {
     }
 
     if (currentPage=="melee") {
-        $("#meleetext").animate({opacity: "0"}, 500, function() {
+        $("#innertext").animate({opacity: "0"}, 500, function() {
             $("#twitch-embed").animate({opacity: "0"});
             $("#meleefox").animate({opacity: "0"}, 500, function() {
                 $("#twitch-embed").css({"visibility" : "hidden"});
                 $("#meleefox").css({"visibility" : "hidden"});
-                $("#meleetext").css({"visibility" : "hidden"});
             });
         });
     }
@@ -371,20 +404,29 @@ function homePage() {
         "text-align": "center",
         "font-size": "12pt"
     });
+    $("#innertext").css({
+        "top": "",
+        "width": "",
+        "height": "",
+        "line-height": "",
+        "overflow-x": "",
+        "font-size": "",
+        "position" : ""
+    });
     $("#innerbox").css({
         "margin-right" : "",
         "margin-bottom": "",
         "height": "",
         "overflow-x": ""
     });
+    document.getElementById("innertext").innerHTML = "ABOUT ME";
+    $("#innertext").animate({opacity:1});
     $("#center-button").addClass('textHover');
     $("#center-button").addClass('blackHover');
     $("#center-button").css("cursor", "pointer");
-    $("#launcher").css({visibility: "visible"});
     $("#center-button").animate({height: "45px", top: "70%"}, function() {
         $("#name").animate({opacity:1});
         $("#blurb").animate({opacity:1});
-        $("#launcher").animate({opacity:1});
     });
     $("#center-button").one('click', function() {
         currentPage = "about";
