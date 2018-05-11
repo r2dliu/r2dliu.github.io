@@ -57,7 +57,7 @@ body {
 	background-image: url("../assets/FOX3.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	background-position: 0px 50px;
+	background-position: 0px 0px;
 	background-color: #242424;
 	height: 100vh;
 }
@@ -72,32 +72,17 @@ body {
 	height: 100%;
  }
 
-/* The logo */
-#logo {
-	left: 8px;
-	top: 8px;
-	position: absolute;
-	width: 40px;
-	height: 40px;
-}
-
-#logo:hover {
-	opacity:0.4;
-	transition: opacity .2s ease-out;
-	-moz-transition: opacity .2s ease-out;
-	-webkit-transition: opacity .2s ease-out;
-	-o-transition: opacity .2s ease-out;
-}
 
 /* The navigation bar */
-.navbar {
-	border-bottom: 1px solid #333333;
+.navbar {lni
+	border-bottom: .1vw solid #333333;
 	background-color: black;
 	opacity:1;
 	position: fixed; /* Set the navbar to fixed position */
 	left: 0; /* Positions navbar to the left, removes gap */
 	top: 0; /* Position the navbar at the top of the page */
 	width: 100%; /* Full width */
+	height: 5.65lnivh;
 	z-index: 1;
 }
 
@@ -105,20 +90,20 @@ body {
 /* Links inside the navbar */
 .navbar a {
 	font-family: "bebasbold", Arial, Helvetica, sans-serif;
-	font-size: 16pt;
+	font-size: 2.5vh;
 	float: right;
 	color: #f2f2f2;
 	text-align: center;
-	padding: 15px 27px;
+	padding: 1vw 1.7vw;
 	text-decoration: none;
-	border-left: 1px solid #333333;
+	border-left: .1vw solid #333333;
 	z-index: 1;
-	letter-spacing: 1px;
+	letter-spacing: .1vw;
 }
 
 .navbar #home {
 	float: left;
-	border-right: 1px solid #333333;
+	border-right: .1vw solid #333333;
 }
 
 .navbar a:hover {
@@ -139,8 +124,8 @@ a.currentlyActive {
 
 /* Main content */
 .container-fluid {
-	padding: 16px;
-	margin-top: 60px;
+	padding: 1vw;
+	margin-top: 5vw;
 }
 
 .blackHover:hover {
@@ -157,9 +142,9 @@ a.currentlyActive {
 }
 
 img.icon {
-	width: 150px;
-	height: 150px;
-	border: 2px solid #333333;
+	width: 10vw;
+	height: 10vw;
+	border: .15vw solid #333333;
 	box-shadow: 8px 8px 5px #111111;
 	-webkit-filter: grayscale(100%);
 	-webkit-transition: .15s ease-in-out;
@@ -184,7 +169,7 @@ img.project {
 	height: 12.8vh;
 	line-height: 1vh;
 	font-size: 1.5vw;
-	border: 2px solid #333333;
+	border: .15vw solid #333333;
 	box-shadow: 8px 8px 5px #111111;
 	-webkit-filter: grayscale(100%);
 	-webkit-transition: .15s ease-in-out;
@@ -212,7 +197,7 @@ img.project:hover {
 	top: 0px;
 	margin-left: 95.8vw;
 	color: white;
-	border: 1px solid white;
+	border: .1vw solid white;
 	opacity: 0;
 	z-index: 1;
 }
@@ -225,7 +210,7 @@ img.project:hover {
 	top: 0px;
 	left: 0px;
 	color: white;
-	border: 1px solid white;
+	border: .1vw solid white;
 	opacity: 0;
 	z-index: 1;
 }
@@ -242,13 +227,13 @@ img.project:hover {
 	color: white;
 	position: absolute;
 	opacity: 0;
-	letter-spacing: 1px
+	letter-spacing: .1vw
 }
 
 #name {
 	font-family: "bebasbold", sans-serif;
 	font-size: 12vh;
-	letter-spacing: 3px;
+	letter-spacing: .3vw;
 	color: white;
 	text-align:center;
 	position: absolute;
@@ -273,7 +258,7 @@ img.project:hover {
 	width: 8.4vw;
 	height: 5vh;
 	position: absolute;
-	border: 2px solid white;
+	border: .15vw solid white;
 	top: 70%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -299,7 +284,7 @@ img.project:hover {
 	top: 5vh;
 	height: 36vw;
 	width: 20vw;
-	border: 2px solid #333333;
+	border: .15vw solid #333333;
 }
 
 #innertext {
@@ -358,12 +343,12 @@ img.project:hover {
 #resume img{
 	filter: brightness(75%);
 	color: #ffffff;
-	max-height: 110px;
-	max-width: 110px;
+	height: 7vw;
+	width: 7vw;
 }
 
 #gmail {
-	border: 2px solid transparent;
+	border: .15vw solid transparent;
 	visibility: hidden;
 	position: fixed;
 	opacity: 0.1;
@@ -702,7 +687,7 @@ hr {
 .articletitle {
 	left: 48px;
 	font-family: "bebasbold";
-	letter-spacing: 1px;
+	letter-spacing: .1vw;
 	font-weight: 1000;
 	color: white;
 	opacity: 1;
