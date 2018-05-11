@@ -316,6 +316,8 @@ img.project:hover {
 	position: absolute;
 	bottom: 2vw;
 	left: 48vw;
+	width: 64vh;
+	height: 36vh;
 }
 
 #meleetext {
