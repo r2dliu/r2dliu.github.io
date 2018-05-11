@@ -770,6 +770,14 @@ body {
 	overflow-y: hidden;
 }
 
+#temp {
+	position: absolute;
+	font-size: 10vh;
+	text-align: center;
+	top: 40%;
+	font-family: "dinprocond";
+	color: white;
+}
 /* Scrollbar */
 
 ::-webkit-scrollbar {
