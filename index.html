@@ -10,6 +10,8 @@
     gtag('config', 'UA-117671460-1');
     </script>
 
+
+
     <title>David Liu</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +31,11 @@
             $('.navlink').click(function() {
                 // this removes the underline class from all other ".navigation" links.
                 $('.navlink').removeClass('currentlyActive');
-                // this makes the one that was clicked underlined
+                // this makes the one that was clicked underlined\
+                $('#cover').css({"z-index": 1});
+                setTimeout(function() {
+                    $('#cover').css("z-index", "-1");
+                }, 3000);
                 $(this).addClass('currentlyActive');
             });
         });
@@ -55,6 +61,8 @@
         <a class="navlink" id="articles" href="#articles">ARTICLES</a>
         <a class="navlink" id="about" href="#about">ABOUT</a>
     </div>
+
+    <div id="cover"></div>
 
     <div id="name">David Liu</div>
     <div id="blurb">Coder | Designer | Melee Player</div>

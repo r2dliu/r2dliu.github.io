@@ -62,6 +62,16 @@ body {
 	height: 100vh;
 }
 
+#cover {
+	background: transparent;
+	z-index: -1;
+	position: absolute;
+	left: 0; /* Positions navbar to the left, removes gap */
+	top: 0; /* Position the navbar at the top of the page */
+	width: 100%; /* Full width */
+	height: 100%;
+ }
+
 /* The logo */
 #logo {
 	left: 8px;
