@@ -40,11 +40,10 @@ function explodePage(button) {
 
 //expansion sequence for the rectangle
 function rectangle(callback) {
-    $("#center-button").animate({height: "0px", top: "700px"});
+    $("#center-button").animate({height: "0px", top: "96vh"});
     $("#center-button").removeClass('textHover');
     $("#center-button").removeClass('blackHover');
     $("#center-button").css("cursor", "auto");
-    $("#center-button").find("span").animate({opacity:0});
     $("#center-button").css("border-top", "0");
     callback();
 }
@@ -52,32 +51,18 @@ function rectangle(callback) {
 //opens the about page
 function aboutPage() {
     //animate top and title
-    $("#center-button").animate({width: "1500px"}, 200, "linear", function() {
-        $("#center-button").animate({height: "600px", top: "400.9px"}, 200, "linear", function() {
+    $("#center-button").animate({width: "96vw"}, 200, "linear", function() {
+        $("#center-button").animate({height: "86vh", top: "53vh"}, 200, "linear", function() {
             //top slide in; marginLeft necessary for right to left
             $("#sliderleft").css({"opacity" : "1"});
             $("#sliderright").css({"opacity" : "1"});
-            $("#sliderleft").animate({width: "1262px", marginLeft: "237px"}, 500);
-            $("#sliderright").animate({width: "25px"}, 500, function() {
+            $("#sliderleft").animate({width: "79vw", marginLeft: "17vw"}, 500);
+            $("#sliderright").animate({width: "2vw"}, 500, function() {
                 $("#center-button").css({
                     "overflow" : "visible"
                 });
-                $("#innerbox").css({
-                    "margin-right" : "-23px",
-                    "margin-bottom": "0px",
-                    "height": "560px"
-                });
                 $("#pagetitle").text("About Me");
-                $("#pagetitle").css({
-                    "font-family": "bebasbold",
-                    "font-size": "40pt",
-                    "top": "-27px",
-                    "left": "50px",
-                    "color": "white",
-                    "position": "absolute",
-                    "opacity": "0",
-                    "letter-spacing": "1px"
-                });
+                $("#pagetitle").css({"visibility": "visible"});
                 $("#pagetitle").animate({opacity:1}, function() {
                     $("#center-button").find("span").animate({opacity:1});
                     $("#innertext").css({"visibility": "visible"});
@@ -98,58 +83,34 @@ function aboutPage() {
 
 //opens the projects page
 function projectsPage() {
-
-    //animate top and title
-    $("#center-button").animate({width: "1500px"}, 200, "linear", function() {
-        $("#center-button").animate({height: "600px", top: "400.9px"}, 200, "linear", function() {
+    $("#center-button").animate({width: "96vw"}, 200, "linear", function() {
+        $("#center-button").animate({height: "86vh", top: "53vh"}, 200, "linear", function() {
             //top slide in; marginLeft necessary for right to left
             $("#sliderleft").css({"opacity" : "1"});
             $("#sliderright").css({"opacity" : "1"});
-            $("#sliderleft").animate({width: "1270px", marginLeft: "230px"}, 500);
-            $("#sliderright").animate({width: "25px"}, 500, function() {
+            $("#sliderleft").animate({width: "79vw", marginLeft: "17vw"}, 500);
+            $("#sliderright").animate({width: "2vw"}, 500, function() {
                 $("#center-button").css({
                     "overflow" : "visible"
                 });
-                $("#innerbox").css({
-                    "margin-right" : "-23px",
-                    "margin-bottom": "0px",
-                    "height": "560px"
-                });
                 $("#pagetitle").text("Projects");
-                $("#pagetitle").css({
-                    "font-family": "bebasbold",
-                    "font-size": "40pt",
-                    "top": "-27px",
-                    "left": "50px",
-                    "color": "white",
-                    "position": "absolute",
-                    "opacity": "0",
-                    "letter-spacing": "1px"
-                });
+                $("#pagetitle").css({"visibility": "visible"});
                 $("#pagetitle").animate({opacity:1}, function() {
                     $("#center-button").find("span").animate({opacity:1});
                     $("#tableone").css({
-                        "visibility": "visible",
-                        "left": "50px",
-                        "top": "50px"
+                        "visibility": "visible"
                     });
                     $("#tableone").animate({opacity: 0.6});
                     $("#scoreboard").css({
-                        "visibility": "visible",
-                        "left": "50px",
-                        "top": "230px"
+                        "visibility": "visible"
                     });
                     $("#scoreboard").animate({opacity: 0.6});
                     $("#website").css({
-                        "visibility": "visible",
-                        "left": "50px",
-                        "top": "410px"
+                        "visibility": "visible"
                     });
                     $("#website").animate({opacity: 0.6});
                     $("#hangman").css({
-                        "visibility": "visible",
-                        "left": "800px",
-                        "top": "50px"
+                        "visibility": "visible"
                     });
                     $("#hangman").animate({opacity: 0.6});
                 });
@@ -164,31 +125,18 @@ function projectsPage() {
 //opens the melee page
 function meleePage() {
     //animate top and title
-    $("#center-button").animate({width: "1500px"}, 200, "linear", function() {
-        $("#center-button").animate({height: "600px", top: "400.9px"}, 200, "linear", function() {
+    $("#center-button").animate({width: "96vw"}, 200, "linear", function() {
+        $("#center-button").animate({height: "86vh", top: "53vh"}, 200, "linear", function() {
             //top slide in; marginLeft necessary for right to left
             $("#sliderleft").css({"opacity" : "1"});
             $("#sliderright").css({"opacity" : "1"});
-            $("#sliderleft").animate({width: "1320px", marginLeft: "178px"}, 500);
-            $("#sliderright").animate({width: "25px"}, 500, function() {
+            $("#sliderleft").animate({width: "83vw", marginLeft: "13vw"}, 500);
+            $("#sliderright").animate({width: "2vw"}, 500, function() {
                 $("#center-button").css({
                     "overflow" : "visible"
                 });
-                $(".link").css({
-                    "text-decoration": "underline",
-                    "color": "#777777"
-                });
                 $("#pagetitle").text("Melee");
-                $("#pagetitle").css({
-                    "font-family": "bebasbold",
-                    "font-size": "40pt",
-                    "top": "-27px",
-                    "left": "48px",
-                    "color": "white",
-                    "position": "absolute",
-                    "opacity": "0",
-                    "letter-spacing": "1px"
-                });
+                $("#pagetitle").css({"visibility": "visible"});
                 $("#meleefox").css({"visibility": "visible"});
                 $("#meleetext").css({"visibility": "visible"});
                 $("#twitch-embed").css({"visibility": "visible"});
@@ -207,32 +155,18 @@ function meleePage() {
 
 function articlesPage() {
     //animate top and title
-    $("#center-button").animate({width: "1500px"}, 200, "linear", function() {
-        $("#center-button").animate({height: "600px", top: "400.9px"}, 200, "linear", function() {
+    $("#center-button").animate({width: "96vw"}, 200, "linear", function() {
+        $("#center-button").animate({height: "86vh", top: "53vh"}, 200, "linear", function() {
             //top slide in; marginLeft necessary for right to left
             $("#sliderleft").css({"opacity" : "1"});
             $("#sliderright").css({"opacity" : "1"});
-            $("#sliderleft").animate({width: "1270px", marginLeft: "230px"}, 500);
-            $("#sliderright").animate({width: "25px"}, 500, function() {
+            $("#sliderleft").animate({width: "79.7vw", marginLeft: "16.3vw"}, 500);
+            $("#sliderright").animate({width: "2vw"}, 500, function() {
                 $("#center-button").css({
                     "overflow" : "visible"
                 });
-                $("#innerbox").css({
-                    "margin-right" : "-23px",
-                    "margin-bottom": "0px",
-                    "height": "560px"
-                });
                 $("#pagetitle").text("Articles");
-                $("#pagetitle").css({
-                    "font-family": "bebasbold",
-                    "font-size": "40pt",
-                    "top": "-27px",
-                    "left": "50px",
-                    "color": "white",
-                    "position": "absolute",
-                    "opacity": "0",
-                    "letter-spacing": "1px"
-                });
+                $("#pagetitle").css({"visibility": "visible"});
                 $("#pagetitle").animate({opacity:1}, function() {
                     $("#center-button").find("span").animate({opacity:1});
                     $("#articlebox").css({
@@ -251,36 +185,44 @@ function articlesPage() {
 
 //open the contact page
 function contactPage() {
-
     //animate top and title
-    $("#center-button").animate({width: "1500px"}, 200, "linear", function() {
-        $("#center-button").animate({height: "600px", top: "400.9px"}, 200, "linear", function() {
+    $("#center-button").animate({width: "96vw"}, 200, "linear", function() {
+        $("#center-button").animate({height: "86vh", top: "53vh"}, 200, "linear", function() {
             //top slide in; marginLeft necessary for right to left
             $("#sliderleft").css({"opacity" : "1"});
             $("#sliderright").css({"opacity" : "1"});
-            $("#sliderleft").animate({width: "1280px", marginLeft: "220px"}, 500);
-            $("#sliderright").animate({width: "25px"}, 500, function() {
+            $("#sliderleft").animate({width: "80.4vw", marginLeft: "15.6vw"}, 500);
+            $("#sliderright").animate({width: "2vw"}, 500, function() {
                 $("#center-button").css({
                     "overflow" : "visible"
                 });
-                $("#innerbox").css({
-                    "margin-right" : "-23px",
-                    "margin-bottom": "0px",
-                    "height": "560px"
-                });
                 $("#pagetitle").text("Contact");
-                $("#pagetitle").css({
-                    "font-family": "bebasbold",
-                    "font-size": "40pt",
-                    "top": "-27px",
-                    "left": "50px",
-                    "color": "white",
-                    "position": "absolute",
-                    "opacity": "0",
-                    "letter-spacing": "1px"
-                });
+                $("#pagetitle").css({"visibility": "visible"});
                 $("#pagetitle").animate({opacity:1}, function() {
-                    $("#center-button").find("span").animate({opacity:1});
+                    $("#gmail").css({
+                        "visibility" : "visible"
+                    });
+                    $("#facebook").css({
+                        "visibility" : "visible"
+                    });
+                    $("#twitter").css({
+                        "visibility" : "visible"
+                    });
+                    $("#phone").css({
+                        "visibility" : "visible"
+                    });
+                    $("#linkedin").css({
+                        "visibility" : "visible"
+                    });
+                    $("#contactblurb").css({
+                        "visibility" : "visible"
+                    });
+                    $("#gmail").animate({"opacity" : 0.3});
+                    $("#facebook").animate({"opacity" : 0.3});
+                    $("#twitter").animate({"opacity" : 0.3});
+                    $("#phone").animate({"opacity" : 0.3});
+                    $("#linkedin").animate({"opacity" : 0.3});
+                    $("#contactblurb").animate({"opacity" : 0.7});
                 });
 
             });
@@ -348,15 +290,12 @@ function closePage(currentPage) {
     }
 
     $("#pagetitle").animate({opacity: "0"}, 500, function() {
-        $("#center-button").css({
-            "overflow" : "hidden"
-        });
-        $("#sliderleft").animate({width: "0px", marginLeft: "1500px"}, 200, "linear");
-        $("#sliderright").animate({width: "0px"}, 200, "linear", function() {
+        $("#sliderleft").animate({width: "0", marginLeft: "96vw"}, 300, "linear");
+        $("#sliderright").animate({width: "0"}, 300, "linear", function() {
             $("#sliderright").css({opacity: "0"});
             $("#sliderleft").css({opacity: "0"});
-            $("#center-button").animate({height: "0px", top: "700px"}, 200, "linear", function() {
-                $("#center-button").animate({width: "120px"}, 300);
+            $("#center-button").animate({height: "0px", top: "96vh"}, 300, "linear", function() {
+                $("#center-button").animate({width: "8.4vw"}, 300);
             });
         });
     });
@@ -364,18 +303,14 @@ function closePage(currentPage) {
 
 function homePage() {
     console.log("home");
+    $("#pagetitle").css("visibility", "hidden");
     $("#center-button").css("border-top", "2px solid white");
+    $("#center-button").css("overflow", "hidden");
     $("#center-button").find("a").css({
         "line-height": "27px",
         "top": "",
         "text-align": "center",
         "font-size": "12pt"
-    });
-    $("#innerbox").css({
-        "margin-right" : "",
-        "margin-bottom": "",
-        "height": "",
-        "overflow-x": ""
     });
     $("#center-button").addClass('textHover');
     $("#center-button").addClass('blackHover');

@@ -31,10 +31,6 @@
                 $('.navlink').removeClass('currentlyActive');
                 // this makes the one that was clicked underlined
                 $(this).addClass('currentlyActive');
-                $('#cover').css({"z-index": 1});
-                setTimeout(function() {
-                    $('#cover').css("z-index", "-1");
-                }, 3000);
             });
         });
     });
@@ -50,19 +46,15 @@
 </head>
 
 <body>
-
     <div class="navbar">
         <!-- <img src="assets/logo.png" id="logo"></img> -->
         <a class="navlink currentlyActive" id="home" href="#home">HOME</a>
-        <a class="navlink" id="extras" href="#extras">EXTRAS</a>
         <a class="navlink" id="contact" href="#contact">CONTACT</a>
         <a class="navlink" id="melee" href="#melee">MELEE</a>
         <a class="navlink" id="projects" href="#projects">PROJECTS</a>
         <a class="navlink" id="articles" href="#articles">ARTICLES</a>
         <a class="navlink" id="about" href="#about">ABOUT</a>
     </div>
-
-    <div id=cover></div>
 
     <div id="name">David Liu</div>
     <div id="blurb">Coder | Designer | Melee Player</div>
@@ -89,25 +81,25 @@
         <!-- Project Page Contents -->
         <a id='tableone' href='https://github.com/r2dliu/tableonegraphs'><img src='assets/tableonepic.png' class='project'></img>
             <div id="project1" class="plabel">Table One</div>
-            <span id="d1">An app developed in Shiny, a web application framework for R. It produces a configurable "table 1," a description of baseline patient characteristics, essential in medical research.</span>
+            <span id="d1" class="pblurb">An app developed in Shiny, a web application framework for R. It produces a configurable "table 1," a description of baseline patient characteristics, essential in medical research.</span>
         </a>
         <a id='scoreboard' href='https://github.com/r2dliu/overlays'><img src='assets/scoreboardpic.png' class='project'></img>
             <div id="project2" class="plabel">Scoreboard</div>
-            <span id="d2">An GUI application developed in Python/PyQt, used to update and animate a configurable scoreboard overlay that displays text such as scores, names, and rounds.</span>
+            <span id="d2" class="pblurb">An GUI application developed in Python/PyQt, used to update and animate a configurable scoreboard overlay that displays text such as scores, names, and rounds.</span>
         </a>
         <a id='website' href='https://github.com/r2dliu/r2dliu.github.io'><img src='assets/sitepic.png' class='project'></img>
             <div id="project3" class="plabel">Website</div>
-            <span id="d3">This website. Made with HTML, CSS3, and Javascript, designed and hand-coded from scratch.</span>
+            <span id="d3" class="pblurb">This website. Made with HTML, CSS3, and Javascript, designed and hand-coded from scratch.</span>
         </a>
         <a id='hangman' href='https://github.com/r2dliu/hangman'><img src='assets/gallows0.png' class='project'></img>
             <div id="project4" class="plabel">Hangman</div>
-            <span id="d4">A hangman game, made in C++. Hand-coded HTTP server, played from a web browser client.</span>
+            <span id="d4" class="pblurb">A hangman game, made in C++. Hand-coded HTTP server, played from a web browser client.</span>
         </a>
 
         <!-- Articles Page Contents -->
         <div id="articlebox">
             <article id="ledgedash" onclick="location.href='articles/ledgedash.html';" class='article'>
-                <div class='tag' style='background-color:red;top: 375px;left: 16px;'>MELEE</div>
+                <div class='tag' style='background-color:red;top: 41vh;left: 1vw;'>MELEE</div>
                 <div class='articleinner'>Optimizing Ledgedash and Effects of PODE
                     <div class='preview'>Recently, I’ve been switching to and from various controllers after my main controller began acting erratically...
                         <div class='readmore'>Read More></div>
@@ -115,7 +107,7 @@
                 </div>
             </article>
             <article id="nim" onclick="location.href='articles/nim.pdf';" class='article'>
-                <div class='tag' style='background-color:green;top: 140px; left: 16px;'>MATH</div>
+                <div class='tag' style='background-color:green;top: 19vh; left: 1vw;'>MATH</div>
                 <div class='articleinner'>On the Game of Nim
                     <div class='preview'>Nim is a simple but fascinating strategy and logic...
                         <div class='readmore'>Read More></div>
@@ -233,51 +225,6 @@
             if (currentPage == "home") {
                 currentPage = "contact";
                 explodePage("contact");
-                setTimeout(function() {
-                    $("#gmail").css({
-                        "visibility" : "visible",
-                        "position" : "fixed",
-                        "left" : "150px",
-                        "top" : "100px"
-                    });
-                    $("#facebook").css({
-                        "visibility" : "visible",
-                        "position" : "fixed",
-                        "left" : "415px",
-                        "top" : "100px"
-                    });
-                    $("#twitter").css({
-                        "visibility" : "visible",
-                        "position" : "fixed",
-                        "left" : "680px",
-                        "top" : "100px"
-                    });
-                    $("#phone").css({
-                        "visibility" : "visible",
-                        "position" : "fixed",
-                        "left" : "945px",
-                        "top" : "100px"
-                    });
-                    $("#linkedin").css({
-                        "visibility" : "visible",
-                        "position" : "fixed",
-                        "left" : "1205px",
-                        "top" : "100px"
-                    });
-                    $("#contactblurb").css({
-                        "visibility" : "visible"
-                    });
-                }, 1600);
-
-                setTimeout(function() {
-                    console.log("opacity changed")
-                    $("#gmail").animate({"opacity" : 0.3});
-                    $("#facebook").animate({"opacity" : 0.3});
-                    $("#twitter").animate({"opacity" : 0.3});
-                    $("#phone").animate({"opacity" : 0.3});
-                    $("#linkedin").animate({"opacity" : 0.3});
-                    $("#contactblurb").animate({"opacity" : .7});
-                }, 1620);
             }
             else if (currentPage != "contact") {
                 closePage(currentPage);
@@ -285,52 +232,6 @@
                 setTimeout(function () {
                     contactPage();
                 }, 1300);
-
-                setTimeout(function() {
-                    $("#gmail").css({
-                        "visibility" : "visible",
-                        "position" : "fixed",
-                        "left" : "150px",
-                        "top" : "100px"
-                    });
-                    $("#facebook").css({
-                        "visibility" : "visible",
-                        "position" : "fixed",
-                        "left" : "415px",
-                        "top" : "100px"
-                    });
-                    $("#twitter").css({
-                        "visibility" : "visible",
-                        "position" : "fixed",
-                        "left" : "680px",
-                        "top" : "100px"
-                    });
-                    $("#phone").css({
-                        "visibility" : "visible",
-                        "position" : "fixed",
-                        "left" : "945px",
-                        "top" : "100px"
-                    });
-                    $("#linkedin").css({
-                        "visibility" : "visible",
-                        "position" : "fixed",
-                        "left" : "1205px",
-                        "top" : "100px"
-                    });
-                    $("#contactblurb").css({
-                        "visibility" : "visible"
-                    });
-                }, 3200);
-
-                setTimeout(function() {
-                    console.log("opacity changed")
-                    $("#gmail").animate({"opacity" : 0.3});
-                    $("#facebook").animate({"opacity" : 0.3});
-                    $("#twitter").animate({"opacity" : 0.3});
-                    $("#phone").animate({"opacity" : 0.3});
-                    $("#linkedin").animate({"opacity" : 0.3});
-                    $("#contactblurb").animate({"opacity" : 0.7});
-                }, 3220);
             };
         });
     });

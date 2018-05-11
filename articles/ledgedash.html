@@ -22,10 +22,6 @@
                 $('.navlink').removeClass('currentlyActive');
                 // this makes the one that was clicked underlined
                 $(this).addClass('currentlyActive');
-                $('#cover').css({"z-index": 1});
-                setTimeout(function() {
-                    $('#cover').css("z-index", "-1");
-                }, 3000);
               });
             });
         });
